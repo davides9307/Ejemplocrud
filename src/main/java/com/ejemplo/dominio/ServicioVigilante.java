@@ -10,5 +10,6 @@ public interface ServicioVigilante {
 	public Vehiculo ActualizarVehiculo(Vehiculo vehiculo);
 	public Vehiculo BuscarVehiculo(Vehiculo vehiculo);
 	public Vehiculo EliminarVehiculo(Vehiculo vehiculo);
+	public Vehiculo BuscarVehiculoPorMarcayMatricula(Vehiculo vehiculo);
 	
 }

@@ -4,7 +4,8 @@
 	
 	import javax.persistence.EntityManager;
 	import javax.persistence.PersistenceContext;
-	import javax.transaction.Transactional;
+import javax.persistence.Query;
+import javax.transaction.Transactional;
 	
 	import org.springframework.stereotype.Repository;
 	
@@ -65,6 +66,17 @@
 			em.remove(vehiculoencontrado);
 			return vehiculoencontrado;
 			
+		}
+
+
+
+		@Override
+		public Vehiculo BuscarVehiculoPorMarcayMatricula(Vehiculo vehiculo) {
+			Query query = em.createNamedQuery("Vehiculo.findbyMatricula");
+			query.setParameter("marca",vehiculo.getMarca());
+			query.setParameter("matricula",vehiculo.getMatricula());
+			return (Vehiculo)query.getSingleResult();
+		
 		}
 		
 		

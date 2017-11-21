@@ -12,7 +12,10 @@
 	
 	
 	@Entity
-	@NamedQueries( { @NamedQuery(name = "Vehiculo.findAll", query = "SELECT v FROM Vehiculo v ORDER BY v.idvehiculo") })
+	@NamedQueries( { @NamedQuery(name = "Vehiculo.findAll", query = "SELECT v FROM Vehiculo v ORDER BY v.idvehiculo"),
+	@NamedQuery(name = "Vehiculo.findbyMatricula", query = "SELECT s FROM Vehiculo s WHERE s.Matricula = :matricula and s.Marca= :marca")	
+	
+	})
 		public class Vehiculo {
 			
 			@Id

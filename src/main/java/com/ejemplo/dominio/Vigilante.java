@@ -76,4 +76,13 @@ public class Vigilante implements ServicioVigilante{
 		return vehiculorepositorio.BorrarVehiculo(vehiculo);
 		
 	}
+
+
+
+
+	@Override
+	public Vehiculo BuscarVehiculoPorMarcayMatricula(Vehiculo vehiculo) {
+		return vehiculorepositorio.BuscarVehiculoPorMarcayMatricula(vehiculo);
+		
+	}
 }

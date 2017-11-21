@@ -10,6 +10,7 @@ public interface VehiculoRepositorio {
 	public Vehiculo BuscarVehiculoPorId(Vehiculo vehiculo);
 	public Vehiculo ActualizarVehiculo(Vehiculo vehiculo);
 	public Vehiculo BorrarVehiculo(Vehiculo vehiculo);
+	public Vehiculo BuscarVehiculoPorMarcayMatricula(Vehiculo vehiculo);
 	
 	
 	
